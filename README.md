@@ -4,5 +4,5 @@
 Init: terraform init<br>
 Plan: terraform plan<br>
 Apply: terraform apply or terraform apply -auto-approve<br>
-Destroy: terraform destroy<br>
+Destroy: terraform destroy -auto-approve<br>
 
