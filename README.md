@@ -58,7 +58,6 @@ resource "aws_instance" "expense" {<br>
 <h4>variable "instances" {<br>
     default = ["mysql", "backend", "frontend"]<br>
 }<br></h4>
-
 ======================================================
 <h3>Functions</h3><br>
 
