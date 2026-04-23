@@ -51,13 +51,14 @@ resource "aws_instance" "expense" {<br>
     instance_type = var.environment == "prod" ? "t3.micro" : "t3.small"<br>
     key_name = var.key_name<br>
     tags = {<br>
-      <h3>Name = var.instances[count.index]</h3><br>
+      <h4>Name = var.instances[count.index]</h4><br>
     }<br>
 }<br>
 
-variable "instances" {<br>
+<h4>variable "instances" {<br>
     default = ["mysql", "backend", "frontend"]<br>
-}<br>
+}<br></h4>
+
 ======================================================
 <h3>Functions</h3><br>
 
