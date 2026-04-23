@@ -13,35 +13,31 @@ data "aws_ami" "al2023" {
   }
 }
 
-resource "aws_instance" "this" {
+resource "aws_instance" "expense" {
     ami         = data.aws_ami.al2023.id
     vpc_security_group_ids = [aws_security_group.allow_tls.id]
-    instance_type = "t3.micro"
-    key_name = "learningdevops"
-    tags = {
-        Name = "terraform-demo"
-    }
+    instance_type = var.environment == "prod" ? "t3.micro" : "t3.small"
+    key_name = var.key_name
+    tags = var.ec2_tags
 }
 
 resource "aws_security_group" "allow_tls" {
-    name = "allow_tls"
+    name = "var.sg_tags"
     description = "Creating a allow_tls sg"
  
     egress {
         from_port = 0
         to_port = 0
         protocol = "-1"
-        cidr_blocks = ["0.0.0.0/0"]
+        cidr_blocks = var.cidr_blocks
     }
 
     ingress {
-        from_port = 22
-        to_port = 22
+        from_port = var.from_port
+        to_port = var.to_port
         protocol = "tcp"
-        cidr_blocks = ["0.0.0.0/0"]
+        cidr_blocks = var.cidr_blocks
     }
 
-    tags = {
-        Name = "allow_tls"
-    }
+    tags = var.sg_tags
 }
