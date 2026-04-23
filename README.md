@@ -1,22 +1,20 @@
 # terraform
-<h3>terraform</h3>
-<h2><Commmands></h2><br>
+<h2>terraform</h2>
+<h3>Commmands</h3><br>
 Init: terraform init<br>
 Plan: terraform plan<br>
 Apply: terraform apply or terraform apply -auto-approve<br>
-<<<<<<< HEAD
-Destroy: terraform destroy -auto-approve<br>
-=======
-Destroy: terraform destroy<br>
+Destroy: terraform destroy -auto-approve or terraform destroy<br>
 Validate: terraform validate<br>
 console: terraform console<br>
  eg: min(11,23,45)<br>
      max(1236,23742,327)<br>
->>>>>>> 4d129fe (Terraform Variables DataTypes Condtions Loops Functions)
-
-<h3>Variables</h3><br>
+===================================
+<h3>(Terraform Variables DataTypes Condtions Loops Functions)</h3><br>
+===================================
+<h2>Variables</h2><br>
 =================
-<h2>Preference of Variable</h2><br>
+<h3>Preference of Variable</h3><br>
 1. Command line passing<br>
     eg: terraform plan -var "instance_type=t3.large<br>
 
@@ -38,13 +36,13 @@ list(string)<br>
 string<br>
 bool<br>
 map<br>
-
+====================================
 <h3> Conditions </h3><br>
 expression ? "true" : "false" <br>
 eg: var.environment == "prod" ? "t3.micro" : "t3.small"<br>
 
-<h3> Loops </h3><br>
-<h2>1. Count Based loops</h2><br>
+<h2> Loops </h2><br>
+<h3>1. Count Based loops</h3><br>
 
 resource "aws_instance" "expense" {<br>
     count = 3<br>
@@ -53,16 +51,14 @@ resource "aws_instance" "expense" {<br>
     instance_type = var.environment == "prod" ? "t3.micro" : "t3.small"<br>
     key_name = var.key_name<br>
     tags = {<br>
-      <h2>Name = var.instances[count.index]</h2><br>
+      <h3>Name = var.instances[count.index]</h3><br>
     }<br>
 }<br>
 
 variable "instances" {<br>
     default = ["mysql", "backend", "frontend"]<br>
 }<br>
-
-
-
+======================================================
 <h3>Functions</h3><br>
 
 Upper Lower<br>
