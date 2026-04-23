@@ -1,5 +1,4 @@
 # terraform
-<h2>terraform</h2>
 <h3>Commmands</h3><br>
 Init: terraform init<br>
 Plan: terraform plan<br>
