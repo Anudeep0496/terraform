@@ -9,6 +9,8 @@ Validate: terraform validate<br>
 console: terraform console<br>
  eg: min(11,23,45)<br>
      max(1236,23742,327)<br>
+To upgrade the init<br>
+terraform init -upgrade <br> # Do not upgrade without informing to team
 ===================================
 <h3>(Terraform Variables DataTypes Condtions Loops Functions)</h3><br>
 ===================================
