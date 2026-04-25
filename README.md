@@ -1,6 +1,7 @@
 # terraform
 <h3>Commmands</h3><br>
 Init: terraform init<br>
+Format: terraform fmt<br>
 Plan: terraform plan<br>
 Apply: terraform apply or terraform apply -auto-approve<br>
 Destroy: terraform destroy -auto-approve or terraform destroy<br>
