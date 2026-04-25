@@ -8,9 +8,9 @@ data "aws_ami" "al2023" {
   }
 
   filter {
-        name   = "root-device-type"
-        values = ["ebs"]
-    }
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
 
   filter {
     name   = "virtualization-type"
@@ -26,6 +26,6 @@ output "aws_vpc" {
   value = data.aws_vpc.vpcdetails.id
 }
 
-output  "ami_id" {
-  value       = data.aws_ami.al2023.id
+output "ami_id" {
+  value = data.aws_ami.al2023.id
 }

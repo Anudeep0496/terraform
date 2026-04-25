@@ -1,5 +1,5 @@
 locals {
-  ami_id = data.aws_ami.al2023.id
+  ami_id        = data.aws_ami.al2023.id
   instance_type = "t3.micro"
-  name = "${var.project}.${var.component}.${var.environment}"
+  name          = "${var.project}.${var.component}.${var.environment}"
 }

@@ -1,17 +1,17 @@
 variable "instance_type" {
-    default = "t3.micro"
-    type = string
-    description = "type of instance"
+  default     = "t3.micro"
+  type        = string
+  description = "type of instance"
 }
 
 variable "project" {
-    default = "expense"
+  default = "expense"
 }
 
 variable "component" {
-    default = "backend"
+  default = "backend"
 }
 
 variable "environment" {
-    default = "dev"
+  default = "dev"
 }
