@@ -4,7 +4,7 @@ resource "aws_instance" "expense" {
     instance_type = local.instance_type
     key_name = "learningdevops"
     tags = {
-        Name = "terraform-demo"
+        Name = local.name
         Purpose = "terraform-practice"
     }
 }
