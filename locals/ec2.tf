@@ -5,6 +5,7 @@ resource "aws_instance" "expense" {
     key_name = "learningdevops"
     tags = {
         Name = "terraform-demo"
+        Purpose = "terraform-practice"
     }
 }
 
