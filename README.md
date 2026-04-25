@@ -99,3 +99,22 @@ merge(<br>
 
 condition<br>
 instance_type = var.env == "prod" ? "t3.micro" : "t2.micro"<br>
+
+<h2>data sources</h2><br>
+==================<br>
+data sources are used to query existing information from the provider. <br>
+devops-practice --> ami-356dgtr4367yt --> ami id changes when new updates are posted.<br>
+
+data "<type>" "<name>" {<br>
+	
+}<br>
+
+output blocks are used to print the information. It will be used in module development too.<br>
+
+<h2>locals</h2><br>
+==================<br>
+locals are used to run the expressions or functions and save the results to variable<br>
+
+locals are used to store expressions, it can even store simple key value pairs just like variables.<br>
+variables can't store expressions. variable can't refer other variable. locals can refer other locals or variables<br>
+variables can be overriden. locals can't be overriden<br>
